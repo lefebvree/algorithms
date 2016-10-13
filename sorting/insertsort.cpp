@@ -11,7 +11,7 @@ using namespace std;
  *    n   ->  size of 't'
  *
  *  @var
- *    selected ->  indice of the selected element
+ *    selected ->  index of the selected element
  */
 void insertSort ( int t[], int n ) {
     int selected;
