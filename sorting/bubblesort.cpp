@@ -14,7 +14,7 @@ void bubblesort ( int t[], int n ) {
     bool swapped = true;
     do {
         swapped = false;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n - 1; i++) {
             if (t[i] > t[i + 1]) {
                 swap(t[i], t[i + 1]);
                 swapped = true;
