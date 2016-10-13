@@ -3,13 +3,13 @@
 #define SORT_H
 
 // Bubble Sort
-void bubblesort ( int t[], int n ) ;
+void bubbleSort ( int t[], int n ) ;
 
 // Select Sort
-void selectsort ( int t[], int n ) ;
+void selectSort ( int t[], int n ) ;
 
 // Insert Sort
-void insertsort ( int t[], int n ) ;
+void insertSort ( int t[], int n ) ;
 
 // Merge Sort
 void mergeSort  ( int t[], int i, int j ) ;
