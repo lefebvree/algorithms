@@ -11,7 +11,7 @@ using namespace std;
  *    n   ->  size of 't'
  *
  *  @var
- *    min ->  minimum value of unsorted element
+ *    min ->  indice of the minimum value of unsorted element
  */
 void selectSort ( int t[], int n ) {
     int min;
