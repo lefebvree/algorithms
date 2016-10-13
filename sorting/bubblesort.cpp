@@ -13,7 +13,7 @@ using namespace std;
  *  @var
  *      swapped ->  if two elements are swapped or not
  */
-void bubblesort ( int t[], int n ) {
+void bubbleSort ( int t[], int n ) {
     bool swapped = true;
     do {
         swapped = false;
