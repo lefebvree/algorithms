@@ -3,14 +3,14 @@
 #define SORT_H
 
 // Bubble Sort
-void bubblesort(int t[], int n);
+void bubblesort ( int t[], int n);
 
 // Merge Sort
-void mergeSort ( int t[], int i, int j ) ;
-void merge     ( int t[], int i, int j, int k );
+void mergeSort  ( int t[], int i, int j ) ;
+void merge      ( int t[], int i, int j, int k );
 
 // Quick Sort
-void quickSort ( int t[], int i, int j );
-int  pivotSort ( int t[], int i, int j, int p );
+void quickSort  ( int t[], int i, int j );
+int  pivotSort  ( int t[], int i, int j, int p );
 
 #endif
