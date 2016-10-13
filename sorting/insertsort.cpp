@@ -13,7 +13,7 @@ using namespace std;
  *  @var
  *    selected ->  indice of the selected element
  */
-void insertSort ( int t[], int n ) {
+void insertsort ( int t[], int n ) {
     int selected;
 
     for (int i = 1; i < n; i++) {
