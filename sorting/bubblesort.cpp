@@ -10,15 +10,15 @@ using namespace std;
  *  t[] -> array to sort
  *  n   -> size of 't'
  */
-void bubblesort(int t[], int n) {
+void bubblesort ( int t[], int n ) {
     bool swapped = true;
     do {
         swapped = false;
-        for(int i = 0; i < n; i++) {
-            if(t[i] > t[i+1]) {
-                swap(t[i], t[i+1]);
+        for (int i = 0; i < n; i++) {
+            if (t[i] > t[i + 1]) {
+                swap(t[i], t[i + 1]);
                 swapped = true;
             }
         }
-    } while(swapped);
+    } while (swapped);
 }
