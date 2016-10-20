@@ -4,26 +4,22 @@
 
 using namespace std;
 
-/*
+/**
  * Save the first element as minimum and check if there is a lower element
- *  @param
- *    t[] ->  array to sort
- *    n   ->  size of 't'
- *
- *  @var
- *    min ->  index of the minimum value of unsorted element
+ * @param array array to sort
+ * @param size  size of 'array'
  */
-void selectSort ( int t[], int n ) {
-    int min;
+void selectSort ( int array[], int size ) {
+    int min; // index of the minimum value of unsorted element
 
-    for (int i = 0; i < n - 1; i++) {
+    for (int i = 0; i < size - 1; i++) {
         min = i;
 
-        for (int j = i + 1; j < n; j++) {
-            if (t[j] < t[min]) {
+        for (int j = i + 1; j < size; j++) {
+            if (array[j] < array[min]) {
                 min = j;
             }
         }
-        swap(t[i], t[min]);
+        swap(array[i], array[min]);
     }
 }
