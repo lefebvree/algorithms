@@ -4,13 +4,10 @@
 
 using namespace std;
 
-/*
+/**
  * Execute sorting algorithm on randomly filled 't' array
- *  @param
- *      argv[1] -> array size
- *      argv[2] -> minimum valur of array elements
- *      argv[3] -> maximum valur of array elements
- *
+ * @param  argv [ array size, array minimum value, arrray maximum value ]
+ * @return      Success code
  */
 int main( int argc, char const ** argv ) {
 
@@ -68,23 +65,21 @@ int main( int argc, char const ** argv ) {
 	return 0;
 }
 
-/*
- * Assign random values to 't' elements in given range
- *  @param
- *      t[] -> array to fill
- *      n   -> size of 't'
- *      min -> minimum value of 't' element
- *      man -> maximum value of 't' element
- *
+/**
+ * Assign random values to 'size' elements in given range
+ * @param array Array to fill
+ * @param size  Size of array
+ * @param min   Minimum value to assign
+ * @param max   Maximum value to assign
  */
-void randomArray ( int t[], int n, int min, int max ) {
+void randomArray ( int array[], int size, int min, int max ) {
 
 	srand(time(0));
 
-	for (int i = 0; i < n; i++) {
+	for (int i = 0; i < size; i++) {
 		int randomvalue = min + (rand() % (int)(max - min + 1));
-		t[i] = randomvalue;
+		array[i] = randomvalue;
 	}
 
-	cout << "Array of size " << n << " created" << endl;
+	cout << "Array of size " << size << " created" << endl;
 }
