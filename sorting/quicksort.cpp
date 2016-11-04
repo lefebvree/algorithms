@@ -2,34 +2,45 @@
 #include "sorting.h"
 using namespace std;
 
-// Sort 't' array from index 'i' to index 'j'
-void quickSort ( int t[], int i, int j ) {
-	int pivot = t[(i + j) / 2];
+/**
+ * Sort 'array' from begin to end
+ * @param array array to sort
+ * @param begin beginning index of the subarray
+ * @param end   end index of the subarray
+ */
+void quickSort ( int array[], int begin, int end ) {
+	int pivot = array[(begin + end) / 2];
 
-	int pivotIndex = pivotSort(t, i, j, pivot);
+	int pivotIndex = pivotSort(array, begin, end, pivot);
 
-	if (i < pivotIndex - 1) quickSort(t, i, pivotIndex - 1);
-	if (pivotIndex < j) quickSort(t, pivotIndex, j);
+	if (begin < pivotIndex - 1) quickSort(array, begin, pivotIndex - 1);
+	if (pivotIndex < end) quickSort(array, pivotIndex, end);
 }
 
-// Partition 't' array from index 'i' to index 'j' regarding value of 'p'
-int pivotSort ( int t[], int i, int j, int p ) {
-	while (i <= j) {
-		while (t[i] < p)
-		i++;
+/**
+ * Partition array from begin to end according to pivot
+ * @param array array to sort
+ * @param begin beginning index of the subarray
+ * @param end   end index of the subarray
+ * @param pivot value of pivot
+ */
+int pivotSort ( int array[], int begin, int end, int pivot ) {
+	while (begin <= end) {
+		while (array[begin] < pivot)
+		begin++;
 
-		while (t[j] > p)
-		j--;
+		while (array[end] > pivot)
+		end--;
 
-		if (i <= j) {
-			int a = t[i];
+		if (begin <= end) {
+			int buffer = array[begin];
 
-			t[i] = t[j];
-			t[j] = a;
+			array[begin] = array[end];
+			array[end] = buffer;
 
-			i++;
-			j--;
+			begin++;
+			end--;
 		}
 	}
-	return i;
+	return begin;
 }

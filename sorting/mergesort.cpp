@@ -45,7 +45,7 @@ void merge ( int array[], int begin, int middle, int end ) {
 }
 
 /**
- * Split recuscivly 'array' in subarray
+ * Split recursively 'array' in subarray
  * @param array array to sort
  * @param begin beginning index of the subarray
  * @param end   end index of the subarray

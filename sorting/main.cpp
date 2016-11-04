@@ -25,7 +25,7 @@ int main( int argc, char const ** argv ) {
 	int array[size] = {};
 	randomArray(array, size, minvalue, maxvalue);
 
-	cout << "0: bubble - 1: select - 2: insert - 3: merge - 4: quick" << endl;
+	cout << "0: Bubble - 1: Select - 2: Insert - 3: Merge - 4: Quick" << endl;
 	cout << "Sorting algorithm to operate: ";
 
 	int sortingfunction;
@@ -38,23 +38,23 @@ int main( int argc, char const ** argv ) {
 	switch (sortingfunction) {
 		case 0:
 			bubbleSort(array, size);
-			cout << "bubble sort results:" << endl;
+			cout << "Bubble sort results:" << endl;
 			break;
 		case 1:
 			selectSort(array, size);
-			cout << "select sort results:" << endl;
+			cout << "Select sort results:" << endl;
 			break;
 		case 2:
 			insertSort(array, size);
-			cout << "insert sort results:" << endl;
+			cout << "Insert sort results:" << endl;
 			break;
 		case 3:
 			mergeSort(array, 0, size);
-			cout << "merge sort results:" << endl;
+			cout << "Merge sort results:" << endl;
 			break;
 		case 4:
 			quickSort(array, 0, size);
-			cout << "quick sort results:" << endl;
+			cout << "Quick sort results:" << endl;
 			break;
 	}
 
